@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="content">
+	<name>plg_content_article_fields</name>
+	<author>Jisse Reitsma</author>
+	<creationDate>February 2015</creationDate>
+	<copyright>Copyright (C) 2014. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later</license>
+	<authorEmail>jisse@yireo.com</authorEmail>
+	<authorUrl>www.yireo.com</authorUrl>
+	<version>0.1.0</version>
+	<description>PLG_CONTENT_ARTICLEFIELDS_XML_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="article_fields">article_fields.php</filename>
+		<folder>form</folder>
+		<filename>index.html</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_article_fields.ini</language>
+		<language tag="en-GB">en-GB.plg_content_article_fields.sys.ini</language>
+	</languages>
+
+</extension>
