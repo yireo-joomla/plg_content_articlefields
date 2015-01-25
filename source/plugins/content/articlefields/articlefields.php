@@ -19,18 +19,7 @@ jimport('joomla.plugin.plugin');
  */
 class PlgContentArticlefields extends JPlugin
 {
-	/**
-	 * Constructor
-	 *
-	 * @param   object  &$subject  Instance of JEventDispatcher
-	 * @param   array   $config    Configuration
-	 */
-	public function __construct(& $subject, $config)
-	{
-		parent::__construct($subject, $config);
-
-		$this->loadLanguage();
-	}
+    protected $autoloadLanguage = true;
 
 	/**
 	 * Event method that runs on content preparation
@@ -74,14 +63,10 @@ class PlgContentArticlefields extends JPlugin
 	 */
 	public function onContentBeforeDisplay($context, &$item, &$params, $page = 0)
 	{
-		if (!empty($item->id))
-		{
-			//$item = $this->loadTest($item);
-		}
-
 		if (!empty($item->test))
 		{
-			$item->text .= '<p>TEST: ' . $item->test . '<p>';
+            $html = '<p>TEST: ' . $item->test . '<p>';
+			$item->text = $html . $item->text;
 		}
 	}
 }

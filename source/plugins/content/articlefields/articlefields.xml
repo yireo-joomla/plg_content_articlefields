@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.4" type="plugin" group="content">
-	<name>plg_content_article_fields</name>
+	<name>plg_content_articlefields</name>
 	<author>Jisse Reitsma</author>
 	<creationDate>February 2015</creationDate>
 	<copyright>Copyright (C) 2014. All rights reserved.</copyright>
@@ -10,15 +10,16 @@
 	<version>0.1.0</version>
 	<description>PLG_CONTENT_ARTICLEFIELDS_XML_DESCRIPTION</description>
 
-	<files>
-		<filename plugin="article_fields">article_fields.php</filename>
+	<files folder="plugins/content/articlefields">
+		<filename plugin="articlefields">articlefields.php</filename>
 		<folder>form</folder>
-		<filename>index.html</filename>
 	</files>
 
-	<languages>
-		<language tag="en-GB">en-GB.plg_content_article_fields.ini</language>
-		<language tag="en-GB">en-GB.plg_content_article_fields.sys.ini</language>
+	<languages folder="administrator/languages">
+		<language tag="en-GB">en-GB/en-GB.plg_content_articlefields.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_content_articlefields.sys.ini</language>
+		<language tag="nl-NL">nl-NL/nl-NL.plg_content_articlefields.ini</language>
+		<language tag="nl-NL">nl-NL/nl-NL.plg_content_articlefields.sys.ini</language>
 	</languages>
 
 </extension>
