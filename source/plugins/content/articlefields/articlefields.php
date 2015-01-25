@@ -63,9 +63,25 @@ class PlgContentArticlefields extends JPlugin
 	 */
 	public function onContentBeforeDisplay($context, &$item, &$params, $page = 0)
 	{
-		if (!empty($item->test))
+        $attributes = new JRegistry($item->attribs);
+        $quote = $attributes->get('quote');
+        $quote_cite = $attributes->get('quote_cite');
+        $quote_class = $this->params->get('quote_class');
+
+		if (!empty($quote))
 		{
-            $html = '<p>TEST: ' . $item->test . '<p>';
+            $html = null;
+            $html .= '<blockquote class="' . $quote_class . '">';
+            $html .= $quote;
+
+            if (!empty($quote_cite)) {
+                $html .= '<footer><cite>';
+                $html .= $quote_cite;
+                $html .= '</cite></footer>';
+            }
+
+            $html .= '</blockquote>';
+
 			$item->text = $html . $item->text;
 		}
 	}

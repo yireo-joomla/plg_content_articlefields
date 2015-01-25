@@ -22,4 +22,15 @@
 		<language tag="nl-NL">nl-NL/nl-NL.plg_content_articlefields.sys.ini</language>
 	</languages>
 
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="quote_class"
+                    label="PLG_CONTENT_ARTICLEFIELDS_PARAMS_QUOTE_CLASS"
+                    description="PLG_CONTENT_ARTICLEFIELDS_PARAMS_QUOTE_CLASS_DESC"
+                />
+            </fieldset>
+        </fields>
+    </config>
+
 </extension>
