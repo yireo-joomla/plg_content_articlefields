@@ -66,15 +66,28 @@ class PlgContentArticlefields extends JPlugin
         $attributes = new JRegistry($item->attribs);
         $quote = $attributes->get('quote');
         $quote_cite = $attributes->get('quote_cite');
+
         $quote_class = $this->params->get('quote_class');
+        $quote_class = preg_replace('/([^a-zA-Z0-9\.\-\_\ ]+)/', '', $quote_class);
+        $quote_class = trim($quote_class);
 
 		if (!empty($quote))
 		{
             $html = null;
-            $html .= '<blockquote class="' . $quote_class . '">';
+
+            if (!empty($quote_class))
+            {
+                $html .= '<blockquote class="' . $quote_class . '">';
+            }
+            else
+            {
+                $html .= '<blockquote>';
+            }
+
             $html .= $quote;
 
-            if (!empty($quote_cite)) {
+            if (!empty($quote_cite))
+            {
                 $html .= '<footer><cite>';
                 $html .= $quote_cite;
                 $html .= '</cite></footer>';
