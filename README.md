@@ -11,27 +11,5 @@ To create an installable package from this source, follow these steps:
 * Move the file `articlefields.xml` to the root of this temporary folder
 * Create a ZIP file of the temporary folder
 
-## Styling the quote
-The code in this repository also contains an extra plugin parameter to allow you to 
-define CSS class used in the blockquote HTML:
-
-    <blockquote class="myblockquote">
-    ...
-
-This allows you to add CSS code to your Joomla template similar to this:
-
-    blockquote.article_quote {
-        text-align: right;
-        float:right;
-        font-size: 180%;
-        padding: 20px;
-        width: 20%;
-    }
-
-    blockquote.article_quote cite {
-        font-size: 70%;
-        font-style: italic;
-    }
-
 ## Questions?
 Any questions can be mailed to jisse@yireo.com.
