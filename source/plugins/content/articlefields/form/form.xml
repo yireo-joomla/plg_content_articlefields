@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<form> 
-    <fields name="attribs"> 
-        <fieldset name="custom" label="PLG_CONTENT_ARTICLEFIELDS_FIELDSET_ARTICLEFIELDS"> 
-            <field 
-                name="quote" 
-                type="textarea" 
-                label="PLG_CONTENT_ARTICLEFIELDS_FIELD_QUOTE_LABEL" 
-                description="PLG_CONTENT_ARTICLEFIELDS_FIELD_QUOTE_DESC" 
-            /> 
-            <field 
-                name="quote_cite" 
-                type="text" 
-                label="PLG_CONTENT_ARTICLEFIELDS_FIELD_QUOTE_CITE_LABEL" 
-                description="PLG_CONTENT_ARTICLEFIELDS_FIELD_QUOTE_CITE_DESC" 
-            /> 
-        </fieldset> 
-    </fields> 
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="attribs">
+        <fieldset name="custom" label="PLG_CONTENT_ARTICLEFIELDS_FIELDSET_ARTICLEFIELDS">
+            <field
+                    name="quote"
+                    type="textarea"
+                    label="PLG_CONTENT_ARTICLEFIELDS_FIELD_QUOTE_LABEL"
+                    description="PLG_CONTENT_ARTICLEFIELDS_FIELD_QUOTE_DESC"
+                    />
+            <field
+                    name="quote_cite"
+                    type="text"
+                    label="PLG_CONTENT_ARTICLEFIELDS_FIELD_QUOTE_CITE_LABEL"
+                    description="PLG_CONTENT_ARTICLEFIELDS_FIELD_QUOTE_CITE_DESC"
+                    />
+        </fieldset>
+    </fields>
 </form>

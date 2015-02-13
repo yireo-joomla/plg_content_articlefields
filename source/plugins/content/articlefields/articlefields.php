@@ -19,13 +19,13 @@ jimport('joomla.plugin.plugin');
  */
 class PlgContentArticlefields extends JPlugin
 {
-    protected $autoloadLanguage = true;
+	protected $autoloadLanguage = true;
 
 	/**
 	 * Event method that runs on content preparation
 	 *
-	 * @param   JForm    $form  The form object
-	 * @param   integer  $data  The form data
+	 * @param   JForm   $form The form object
+	 * @param   integer $data The form data
 	 *
 	 * @return bool
 	 */
@@ -54,33 +54,34 @@ class PlgContentArticlefields extends JPlugin
 	/**
 	 * Event method run before content is displayed
 	 *
-	 * @param   string  $context  The context for the content passed to the plugin.
-	 * @param   object  &$item    The content to be displayed
-	 * @param   mixed   &$params  The item params
-	 * @param   int     $page     Current page
+	 * @param   string $context The context for the content passed to the plugin.
+	 * @param   object &$item   The content to be displayed
+	 * @param   mixed  &$params The item params
+	 * @param   int    $page    Current page
 	 *
-	 * @return	null
+	 * @return    null
 	 */
 	public function onContentBeforeDisplay($context, &$item, &$params, $page = 0)
 	{
-        $attributes = new JRegistry($item->attribs);
-        $quote = $attributes->get('quote');
-        $quote_cite = $attributes->get('quote_cite');
-        $quote_class = $this->params->get('quote_class');
+		$attributes = new JRegistry($item->attribs);
+		$quote = $attributes->get('quote');
+		$quote_cite = $attributes->get('quote_cite');
+		$quote_class = $this->params->get('quote_class');
 
 		if (!empty($quote))
 		{
-            $html = null;
-            $html .= '<blockquote class="' . $quote_class . '">';
-            $html .= $quote;
+			$html = null;
+			$html .= '<blockquote class="' . $quote_class . '">';
+			$html .= $quote;
 
-            if (!empty($quote_cite)) {
-                $html .= '<footer><cite>';
-                $html .= $quote_cite;
-                $html .= '</cite></footer>';
-            }
+			if (!empty($quote_cite))
+			{
+				$html .= '<footer><cite>';
+				$html .= $quote_cite;
+				$html .= '</cite></footer>';
+			}
 
-            $html .= '</blockquote>';
+			$html .= '</blockquote>';
 
 			$item->text = $html . $item->text;
 		}

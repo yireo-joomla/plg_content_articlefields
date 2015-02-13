@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.4" type="plugin" group="content">
-	<name>plg_content_articlefields</name>
-	<author>Jisse Reitsma</author>
-	<creationDate>February 2015</creationDate>
-	<copyright>Copyright (C) 2014. All rights reserved.</copyright>
-	<license>GNU General Public License version 3 or later</license>
-	<authorEmail>jisse@yireo.com</authorEmail>
-	<authorUrl>www.yireo.com</authorUrl>
-	<version>0.1.0</version>
-	<description>PLG_CONTENT_ARTICLEFIELDS_XML_DESCRIPTION</description>
+    <name>plg_content_articlefields</name>
+    <author>Jisse Reitsma</author>
+    <creationDate>February 2015</creationDate>
+    <copyright>Copyright (C) 2014. All rights reserved.</copyright>
+    <license>GNU General Public License version 3 or later</license>
+    <authorEmail>jisse@yireo.com</authorEmail>
+    <authorUrl>www.yireo.com</authorUrl>
+    <version>0.1.0</version>
+    <description>PLG_CONTENT_ARTICLEFIELDS_XML_DESCRIPTION</description>
 
-	<files folder="plugins/content/articlefields">
-		<filename plugin="articlefields">articlefields.php</filename>
-		<folder>form</folder>
-	</files>
+    <files folder="plugins/content/articlefields">
+        <filename plugin="articlefields">articlefields.php</filename>
+        <folder>form</folder>
+    </files>
 
-	<languages folder="administrator/languages">
-		<language tag="en-GB">en-GB/en-GB.plg_content_articlefields.ini</language>
-		<language tag="en-GB">en-GB/en-GB.plg_content_articlefields.sys.ini</language>
-		<language tag="nl-NL">nl-NL/nl-NL.plg_content_articlefields.ini</language>
-		<language tag="nl-NL">nl-NL/nl-NL.plg_content_articlefields.sys.ini</language>
-	</languages>
+    <languages folder="administrator/languages">
+        <language tag="en-GB">en-GB/en-GB.plg_content_articlefields.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_content_articlefields.sys.ini</language>
+        <language tag="nl-NL">nl-NL/nl-NL.plg_content_articlefields.ini</language>
+        <language tag="nl-NL">nl-NL/nl-NL.plg_content_articlefields.sys.ini</language>
+    </languages>
 
     <config>
         <fields name="params">
             <fieldset name="basic">
                 <field name="quote_class"
-                    label="PLG_CONTENT_ARTICLEFIELDS_PARAMS_QUOTE_CLASS"
-                    description="PLG_CONTENT_ARTICLEFIELDS_PARAMS_QUOTE_CLASS_DESC"
-                />
+                       label="PLG_CONTENT_ARTICLEFIELDS_PARAMS_QUOTE_CLASS"
+                       description="PLG_CONTENT_ARTICLEFIELDS_PARAMS_QUOTE_CLASS_DESC"
+                        />
             </fieldset>
         </fields>
     </config>
