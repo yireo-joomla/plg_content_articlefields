@@ -2,10 +2,10 @@
 /**
  * Content Plugin for Joomla! - Article Fields
  *
- * @author     Jisse Reitsma <jisse@yireo.com>
+ * @author	 Jisse Reitsma <jisse@yireo.com>
  * @copyright  Copyright 2015 Jisse Reitsma
- * @license    GNU Public License version 3 or later
- * @link       https://github.com/yireo/plg_content_articlefields
+ * @license	GNU Public License version 3 or later
+ * @link	   https://github.com/yireo/plg_content_articlefields
  */
 
 defined('_JEXEC') or die;
@@ -57,41 +57,41 @@ class PlgContentArticlefields extends JPlugin
 	 * @param   string $context The context for the content passed to the plugin.
 	 * @param   object &$item   The content to be displayed
 	 * @param   mixed  &$params The item params
-	 * @param   int    $page    Current page
+	 * @param   int	$page	Current page
 	 *
-	 * @return    null
+	 * @return	null
 	 */
 	public function onContentBeforeDisplay($context, &$item, &$params, $page = 0)
 	{
-        $attributes = new JRegistry($item->attribs);
-        $quote = $attributes->get('quote');
-        $quote_cite = $attributes->get('quote_cite');
+		$attributes = new JRegistry($item->attribs);
+		$quote = $attributes->get('quote');
+		$quote_cite = $attributes->get('quote_cite');
 
-        $quote_class = $this->params->get('quote_class');
-        $quote_class = preg_replace('/([^a-zA-Z0-9\.\-\_\ ]+)/', '', $quote_class);
-        $quote_class = trim($quote_class);
+		$quote_class = $this->params->get('quote_class');
+		$quote_class = preg_replace('/([^a-zA-Z0-9\.\-\_\ ]+)/', '', $quote_class);
+		$quote_class = trim($quote_class);
 
 		if (!empty($quote))
 		{
-            $html = null;
+			$html = null;
 
-            if (!empty($quote_class))
-            {
-                $html .= '<blockquote class="' . $quote_class . '">';
-            }
-            else
-            {
-                $html .= '<blockquote>';
-            }
+			if (!empty($quote_class))
+			{
+				$html .= '<blockquote class="' . $quote_class . '">';
+			}
+			else
+			{
+				$html .= '<blockquote>';
+			}
 
-            $html .= $quote;
+			$html .= $quote;
 
-            if (!empty($quote_cite))
-            {
-                $html .= '<footer><cite>';
-                $html .= $quote_cite;
-                $html .= '</cite></footer>';
-            }
+			if (!empty($quote_cite))
+			{
+				$html .= '<footer><cite>';
+				$html .= $quote_cite;
+				$html .= '</cite></footer>';
+			}
 
 			$html .= '</blockquote>';
 
